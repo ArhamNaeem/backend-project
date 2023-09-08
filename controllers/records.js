@@ -69,6 +69,7 @@ const getRandomRecord = async (req, res) => {
       {
         $match: {
           price: { $gte: min, $lte: max },
+          vip: user.VIP
         },
       },
       { $sample: { size: 1 } }, // Retrieve one random movie

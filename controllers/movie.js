@@ -8,7 +8,8 @@ const addMovie = async (req, res) => {
     const newMovie = new Movie({
       title,
       product,
-      price
+      price,
+      vip
     });
 
     await newMovie.save();
