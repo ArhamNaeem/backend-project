@@ -9,7 +9,7 @@ const addMovie = async (req, res) => {
       title,
       product,
       price,
-      vip
+      VIPLevel
     });
 
     await newMovie.save();
