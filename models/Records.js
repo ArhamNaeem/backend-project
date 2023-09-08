@@ -12,7 +12,7 @@ const orderSchema = new mongoose.Schema({
     default: Date.now,
   },
   price: {
-    type: String,
+    type: Number,
     required: true,
   },product:{
     type:String,
@@ -21,7 +21,7 @@ const orderSchema = new mongoose.Schema({
     type:String,
     required:true
   },totalReturn:{
-    type:String,
+    type:Number,
     required:false
   },
   user: {

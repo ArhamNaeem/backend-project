@@ -66,7 +66,6 @@ const getRandomRecord = async (req, res) => {
       {
         $match: {
           price: { $gte: min, $lte: max },
-          price: { $lte: maxPrice["max"], $gte: maxPrice["min"] },
         },
       },
       { $sample: { size: 1 } }, // Retrieve one random movie
