@@ -7,9 +7,8 @@ const addRecord = async (req, res) => {
   try {
     const user = await User.findByIdAndUpdate({_id:req.body.user})
     if(price > user.balance){
-      return res.status(400).json({'message':"User balance is not enough"})
+      return res.status(400).json({'message':"User balance is not enough",balace:user.balance})
     }
-    console.log(user)
     const record = await Record.create({ ...req.body });
     user.balance -= price
     user.ticketBought+=1
