@@ -56,7 +56,7 @@ const getRandomRecord = async (req, res) => {
     }
 
     const vipPriceRanges = {
-      0: { min: 188, max: 188 },
+      0: { min: 0, max: 188 },
       1: { min: 100, max: 999 },
       2: { min: 1000, max: 7999 },
     };
