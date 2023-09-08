@@ -11,7 +11,7 @@ const addRecord = async (req, res) => {
     }
     const record = await Record.create({ ...req.body });
     user.balance -= price
-    user.ticketBought+=1
+    user.ticketsBought+=1
     user.save()
     // console.log(user,record)
     res.status(StatusCodes.CREATED).json({ message: "Record added", record });
