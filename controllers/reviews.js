@@ -14,8 +14,7 @@ const setMovieReview = async (req, res) => {
     const user = await User.findByIdAndUpdate(userId);
     const movie = await Movie.findByIdAndUpdate(movieId);
 
-
-    if (user.VIP <2 && user.movieRated === 30) {
+    if (user.VIP <2 && user.movieRated === 30 ) {
       res.status(403).json({message:'User has reached max limit of 30 reviews'})
       
     }

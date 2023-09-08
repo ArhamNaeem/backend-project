@@ -28,6 +28,22 @@ const getUserPoints = async (req,res)=>{
     }
 }
 
+
+const getUserTicketsBought = async (req,res)=>{
+    const userId = req.params.userID
+    try{
+        const user = await User.findById(userId)
+        if (!user) {
+            return res.status(StatusCodes.NOT_FOUND).json({ message: 'User not found' });
+          }
+        return res.status(StatusCodes.OK).json({ticketBought:user.ticketsBought})
+        
+    }catch(error){
+        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({'message':'Server error'})
+    }
+}
+
+
 const getUserBalance = async (req,res)=>{
     const userId = req.params.userID
     try{
@@ -44,5 +60,6 @@ const getUserBalance = async (req,res)=>{
 module.exports = {
     getUserPoints,
     getUserVIPLevel,
-    getUserBalance
+    getUserBalance,
+getUserTicketsBought
 }
