@@ -20,7 +20,29 @@ const addMovie = async (req, res) => {
   }
 };
 
+const deleteAllMovies = async(req,res)=>{
+  try {
+    await Movie.deleteMany({})
+
+    res.status(StatusCodes.OK).json({ message: 'Movies successfully deleted!' });
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ message: 'Internal server error' });
+  }
+}
+
+
+const getAllMovies = async (req,res)=>{
+  try {
+  const movies = Movie.find({})
+    res.status(StatusCodes.OK).json({ message: 'Successfully retrieved movie data',movies });
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ message: 'Internal server error' });
+  }
+}
 
 module.exports = {
-addMovie
+addMovie,
+deleteAllMovies,getAllMovies
 }

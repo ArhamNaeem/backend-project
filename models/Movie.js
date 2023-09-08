@@ -33,6 +33,9 @@ product:{
 },price:{
   type:Number,
   required:[true, 'please provide price'],
+},VIPLevel:{
+  type:Number,
+  required:[true,'please provide VIPlevel']
 },
   ratingsAndReviews: [ratingSchema], // Array of rating/review subdocuments
 });
