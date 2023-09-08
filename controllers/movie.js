@@ -34,7 +34,7 @@ const deleteAllMovies = async(req,res)=>{
 
 const getAllMovies = async (req,res)=>{
   try {
-  const movies = Movie.find({})
+  const movies = await Movie.find({})
     res.status(StatusCodes.OK).json({ message: 'Successfully retrieved movie data',movies });
   } catch (error) {
     console.error('Error:', error);
