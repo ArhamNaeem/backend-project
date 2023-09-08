@@ -5,11 +5,12 @@ const Movie = require("../models/Movie");
 const addRecord = async (req, res) => {
   const { price } = req.body;
   try {
-    // const user = await User.findByIdAndUpdate({_id:req.body.user})
-    // console.log(user)
+    const user = await User.findByIdAndUpdate({_id:req.body.user})
+    console.log(user)
     const record = await Record.create({ ...req.body });
-    // user.balance -= price
-    // user.save()
+    user.balance -= price
+    user.ticketBought+=1
+    user.save()
     // console.log(user,record)
     res.status(StatusCodes.CREATED).json({ message: "Record added", record });
   } catch (error) {
