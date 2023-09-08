@@ -10,6 +10,10 @@ const addRecord = async (req, res) => {
       return res.status(400).json({'message':"User balance is not enough",balance:user.balance})
     }
     const record = await Record.create({ ...req.body });
+    if(user.trialBonus !== 0 && user.trialBonus >= price){
+      user.trialBonus -= price
+    }
+    user.totalDayEarn += (user.commRate * price).toFixed(2)
     user.balance -= price
     user.ticketsBought+=1
     user.save()

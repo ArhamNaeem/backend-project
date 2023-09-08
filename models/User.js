@@ -51,6 +51,9 @@ const UserSchema = new mongoose.Schema({
   balance: {
     type: Number,
     default: 188
+  },trialBonus:{
+    type:Number,
+    default:188
   }
 }
 )

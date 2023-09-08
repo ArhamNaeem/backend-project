@@ -18,7 +18,7 @@ const orderSchema = new mongoose.Schema({
     type:String,
     required:true
   },comm:{
-    type:String,
+    type:Number,
     required:true
   },totalReturn:{
     type:Number,
