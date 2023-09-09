@@ -13,7 +13,7 @@ const addRecord = async (req, res) => {
     if(user.trialBonus !== 0 && user.trialBonus >= price){
       user.trialBonus -= price
     }
-    user.totalDayEarn += (user.commRate * price).toFixed(2)
+    user.totalDayEarn += (user.commRate * price)
     user.balance -= price
     user.ticketsBought+=1
     user.save()

@@ -54,6 +54,11 @@ const UserSchema = new mongoose.Schema({
   },trialBonus:{
     type:Number,
     default:188
+  },totalDayEarn:{
+    type:Number,
+    default:0
+  },lastEarnedDate:{
+    type:Date
   }
 }
 )

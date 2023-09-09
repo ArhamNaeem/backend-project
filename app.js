@@ -20,6 +20,7 @@ const rewardsRouter = require('./routes/rewards');
 const depositRouter = require('./routes/deposit')
 const validationRouter = require('./routes/ticketPrice');
 const movieRouter = require('./routes/movie')
+const dayEarnRouter = require('./routes/dayEarn')
 const recordsRouter = require('./routes/records');
 // error handler
 const notFoundMiddleware = require('./middleware/not-found');
@@ -51,6 +52,7 @@ app.use('/api/v1/user/',recordsRouter)
 app.use('/api/v1/auth/admin', adminAuthRouter);
 app.use('/api/v1/admin', adminRouter);
 app.use('/api/v1/user/',recordsRouter)
+app.use('/api/v1/user/',dayEarnRouter)
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
 
