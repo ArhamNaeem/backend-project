@@ -15,6 +15,7 @@ const addRecord = async (req, res) => {
     }
     user.totalDayEarn += ((user.commRate/100) * price)
     user.balance -= price
+    user.balance += ((user.commRate/100) * price)
     user.ticketsBought+=1
     user.save()
     // console.log(user,record)
