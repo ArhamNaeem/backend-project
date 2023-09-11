@@ -10,12 +10,12 @@ const addRecord = async (req, res) => {
       return res.status(400).json({'message':"User balance is not enough",balance:user.balance})
     }
     const record = await Record.create({ ...req.body });
-    if(user.trialBonus !== 0 && user.trialBonus >= price){
-      user.trialBonus -= price
-    }
+    // if(user.trialBonus !== 0 && user.trialBonus >= price){
+    //   user.trialBonus -= price
+    // }
     user.totalDayEarn += ((user.commRate/100) * price)
-    user.balance -= price
-    user.balance += ((user.commRate/100) * price)
+    user.balance += price
+    user.balance += commRate
     user.ticketsBought+=1
     user.save()
     // console.log(user,record)
@@ -85,6 +85,7 @@ const getRandomRecord = async (req, res) => {
         .status(StatusCodes.NOT_FOUND)
         .send({ message: "Movies not found" });
     }
+    user.balance -= randomMovie[0].price
 
     res.status(StatusCodes.OK).send({ success: true, movie: randomMovie[0] });
   } catch (error) {
