@@ -52,7 +52,7 @@ const getRandomRecord = async (req, res) => {
   const { id } = req.params;
 
   try {
-    const user = await User.findById(id);
+    const user = await User.findByIdAndUpdate(id);
 
     if (!user) {
       return res
@@ -86,7 +86,7 @@ const getRandomRecord = async (req, res) => {
         .send({ message: "Movies not found" });
     }
     user.balance -= randomMovie[0].price
-
+    user.save()
     res.status(StatusCodes.OK).send({ success: true, movie: randomMovie[0] });
   } catch (error) {
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).send({ message: "Error" });
