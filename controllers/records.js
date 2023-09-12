@@ -11,9 +11,6 @@ const addRecord = async (req, res) => {
     // if(user.trialBonus !== 0 && user.trialBonus >= price){
     //   user.trialBonus -= price
     // }
-    if(price > user.balance){
-      return res.status(400).json({'message':"User balance is not enough",balance:user.balance})
-    }
     user.totalDayEarn += user.commRate
     user.balance += price
     user.balance += user.commRate
