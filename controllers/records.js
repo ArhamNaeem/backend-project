@@ -6,13 +6,14 @@ const addRecord = async (req, res) => {
   const { price } = req.body;
   try {
     const user = await User.findByIdAndUpdate({_id:req.body.user})
-    if(price > user.balance){
-      return res.status(400).json({'message':"User balance is not enough",balance:user.balance})
-    }
+ 
     const record = await Record.create({ ...req.body });
     // if(user.trialBonus !== 0 && user.trialBonus >= price){
     //   user.trialBonus -= price
     // }
+    if(price > user.balance){
+      return res.status(400).json({'message':"User balance is not enough",balance:user.balance})
+    }
     user.totalDayEarn += user.commRate
     user.balance += price
     user.balance += user.commRate
@@ -84,6 +85,9 @@ const getRandomRecord = async (req, res) => {
       return res
         .status(StatusCodes.NOT_FOUND)
         .send({ message: "Movies not found" });
+    }
+    if(randomMovie[0].price > user.balance){
+      return res.status(400).json({'message':"User balance is not enough",balance:user.balance})
     }
     user.balance -= randomMovie[0].price
     user.save()
