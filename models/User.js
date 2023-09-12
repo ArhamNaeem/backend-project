@@ -22,7 +22,7 @@ const UserSchema = new mongoose.Schema({
   },
   commRate: {
     type: Number,
-    default: 0.3
+    default: 0.8
   },
   blocked: {
     type: Boolean,
