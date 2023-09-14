@@ -77,7 +77,6 @@ const getRandomRecord = async (req, res) => {
           VIPLevel: user.VIP
         },
       },
-      { $sample: { size: 1 } }, // Retrieve one random movie
     ]);
     
     // console.log(randomMovie,user.VIP)
