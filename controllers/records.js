@@ -57,9 +57,9 @@ const getRandomRecord = async (req, res) => {
         .status(StatusCodes.NOT_FOUND)
         .send({ message: "User not found" });
     }
-    console.log(user)
-  if(user.ticketsBought > 30){
-   return  res.status(StatusCodes.FORBIDDEN).json({success:false,message:"User has completed 30 tasks"})
+  if(user.ticketsBought >= 30){
+    res.status(StatusCodes.FORBIDDEN).send({ success: false, movie: [] });
+
   }
     const vipPriceRanges = {
       0: { min: 0, max: 188 },
