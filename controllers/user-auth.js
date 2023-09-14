@@ -5,10 +5,10 @@ const bcrypt = require("bcryptjs");
 
 const register = async (req, res) => {
   const user = await User.create({ ...req.body });
-
+  const token = User.createJWT()
   return res
     .status(StatusCodes.CREATED)
-    .json({ message: "Successfully registered" });
+    .json({ message: "Successfully registered" ,token});
 };
 
 const login = async (req, res) => {
@@ -50,8 +50,9 @@ const updateUser = async (req, res) => {
     if (!updatedUser) {
       return res.status(404).json({ message: "User not found" });
     }
+    const token = user.createJWT();
 
-    res.json({ message: "User updated successfully", user: updatedUser });
+    res.json({ message: "User updated successfully", user: updatedUser,token });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Server error" });

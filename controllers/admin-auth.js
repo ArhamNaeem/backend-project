@@ -1,14 +1,13 @@
 const Admin = require('../models/Admin')
 const User = require('../models/User')
 const { StatusCodes } = require('http-status-codes');
-const jwt=require('jsonwebtoken');
-const jwtSeceret="IAmDevelopingMernSTACKWebsiteOfFoodOrderingSystem"
 
 
 const registerAdmin = async (req, res) => {
   try {
     const admin = await Admin.create({ ...req.body })
-    res.status(StatusCodes.CREATED).json({sucess:true})
+    const token = Admin.createJWT()
+    res.status(StatusCodes.CREATED).json({success:true,token})
   } catch (error) {
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({sucess:false})
   }
@@ -22,9 +21,10 @@ const registerUser= async (req, res) => {
           id:user.id
       }
   }
-  const authToken = jwt.sign(data, jwtSeceret);
+  const token = User.createJWT()
+
   // res.json({success: true, authToken:authToken });
-    res.status(StatusCodes.CREATED).json({sucess:true, authToken:authToken })
+    res.status(StatusCodes.CREATED).json({success:true, token })
   } catch (error) {
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({sucess:false})
   }
@@ -46,7 +46,8 @@ const loginAdmin = async (req, res) => {
     if (!isPasswordCorrect) {
       throw new UnauthenticatedError('Invalid Credentials')
     }
-    res.status(StatusCodes.OK).json({sucess:true})
+    const token = admin.createJWT()
+    res.status(StatusCodes.OK).json({sucess:true,token})
   }
   catch(error){
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({sucess:false})
@@ -68,7 +69,8 @@ const loginUser = async (req, res) => {
     if (!isPasswordCorrect) {
       throw new UnauthenticatedError('Invalid Credentials')
     }
-    res.status(StatusCodes.OK).json({user,sucess:true})
+    const token = User.createJWT()
+    res.status(StatusCodes.OK).json({user,sucess:true,token})
   }
   catch(error){
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({sucess:false})
@@ -91,8 +93,8 @@ const updateUser = async (req, res) => {
     if (!updatedUser) {
       return res.status(404).json({ message: 'User not found' });
     }
-
-    res.json({ message: 'User updated successfully', user: updatedUser });
+const token = User.createJWT()
+    res.json({ message: 'User updated successfully', user: updatedUser,token });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Server error' });
