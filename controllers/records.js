@@ -132,7 +132,6 @@ const getMaxTaskUsers = async (req, res) => {
       record: users,
     });
   } catch (error) {
-    console.error("Error:", error);
     res
       .status(StatusCodes.INTERNAL_SERVER_ERROR)
       .json({ message: "Server error!", error });
