@@ -51,14 +51,14 @@ const getRandomRecord = async (req, res) => {
 
   try {
     const user = await User.findByIdAndUpdate(id);
-
+   
     if (!user) {
       return res
         .status(StatusCodes.NOT_FOUND)
         .send({ message: "User not found" });
     }
   if(user.ticketBought === 30){
-    res.json({success:false,message:"User has completed 30 tasks"})
+    res.status(StatusCodes.FORBIDDEN).json({success:false,message:"User has completed 30 tasks"})
   }
     const vipPriceRanges = {
       0: { min: 0, max: 188 },
@@ -79,18 +79,40 @@ const getRandomRecord = async (req, res) => {
       },
       { $sample: { size: 1 } }, // Retrieve one random movie
     ]);
+    
     // console.log(randomMovie,user.VIP)
     if (!randomMovie.length) {
       return res
         .status(StatusCodes.NOT_FOUND)
         .send({ message: "Movies not found" });
     }
-    if(randomMovie[0].price > user.balance){
+
+
+
+    let index=0
+
+    if(!user.movieShown.length){
+      user.movieShown.push(randomMovie[index]._id)
+    }else {
+      for (const movie of randomMovie){
+        if(!user.movieShown.includes(movie._id)){
+        user.movieShown.push(movie._id)
+        break
+        }
+        index++
+      }
+    }
+
+    if(randomMovie[index].price > user.balance){
       return res.status(400).json({'message':"User balance is not enough",balance:user.balance})
     }
-    user.balance -= randomMovie[0].price
+
+  
+
+
+    user.balance -= randomMovie[index].price
     user.save()
-    res.status(StatusCodes.OK).send({ success: true, movie: randomMovie[0] });
+    res.status(StatusCodes.OK).send({ success: true, movie: randomMovie[index] });
   } catch (error) {
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).send({ message: "Error" });
   }

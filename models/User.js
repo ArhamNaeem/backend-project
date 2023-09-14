@@ -59,9 +59,12 @@ const UserSchema = new mongoose.Schema({
     default:0
   },lastEarnedDate:{
     type:Date
-  }
-}
-)
+  },  movieShown: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Movie' 
+  }],
+
+})
 
 
 

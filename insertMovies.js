@@ -1,7 +1,7 @@
 const axios = require('axios');
 const async = require('async');
 
-const apiUrl = 'https://backend-final-v2.onrender.com/api/v1/movie/addMovie/';
+const apiUrl = 'http://localhost:5002/api/v1/movie/addMovie/';
 const movieData = require('./movieData.json'); // Replace with the path to your movie data
 
 const insertMovie = (movie, callback) => {
