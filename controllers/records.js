@@ -11,7 +11,7 @@ const addRecord = async (req, res) => {
     // if(user.trialBonus !== 0 && user.trialBonus >= price){
     //   user.trialBonus -= price
     // }
-    if(user.ticketsBought === 30){
+    if(user.ticketsBought >= 30){
     res.status(StatusCodes.FORBIDDEN).json({ success:false, message:'Record cannot be dded' });
 
     }
