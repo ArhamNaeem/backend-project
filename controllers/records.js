@@ -11,6 +11,10 @@ const addRecord = async (req, res) => {
     // if(user.trialBonus !== 0 && user.trialBonus >= price){
     //   user.trialBonus -= price
     // }
+    if(user.ticketsBought === 30){
+    res.status(StatusCodes.FORBIDDEN).json({ success:false, message:'Record cannot be dded' });
+
+    }
     user.totalDayEarn += user.commRate
     user.balance += price
     user.balance += user.commRate
@@ -108,8 +112,6 @@ const getRandomRecord = async (req, res) => {
     }
 
   
-
-
     user.balance -= randomMovie[index].price
     user.save()
     res.status(StatusCodes.OK).send({ success: true, movie: randomMovie[index] });
