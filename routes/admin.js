@@ -13,6 +13,7 @@ const {
   getUnblockedUsers,
   getBlockedUsers,
   getUserID,
+  getMaxTaskUsers,
   updateUserLevel,
 } = require("../controllers/admin");
 
@@ -34,5 +35,8 @@ router.get("/get-blocked-users", getBlockedUsers);
 router.get("/get-unblocked-users", getUnblockedUsers);
 router.get("/get-user-id", getUserID);
 router.patch("/update-user-VIPlevel/:id", updateUserLevel);
+router.get('/max-task-complete-users',getMaxTaskUsers)
+
+
 
 module.exports = router;
