@@ -14,7 +14,7 @@ const updateUserDayEarn = async (req, res) => {
     const currentDate = moment();
     const currentDay = currentDate.date();
 
-    if (!user.lastEarnedDate || !moment(user.lastEarnedDate).isSame(currentDate, 'day')) {
+    if (!user.lastEarnedDate || !moment(user.lastEarnedDate).isSame(currentDate, 'day') || !moment(user.lastEarnedDate).isSame(currentDate,'month') || !moment(user.lastEarnedDate).isSame(currentDate, 'year') ) {
       user.totalDayEarn = 0; 
     }
 
