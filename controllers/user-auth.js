@@ -11,6 +11,7 @@ const register = async (req, res) => {
     .json({ message: "Successfully registered" });
 };
 
+
 const login = async (req, res) => {
   const { email, password } = req.body;
   try {
@@ -18,19 +19,18 @@ const login = async (req, res) => {
       throw new BadRequestError("Please provide email and password");
     }
     const user = await User.findOne({ email });
-    console.log(user)
+    console.log('user found', user)
     if (!user) {
       throw new UnauthenticatedError("User not found");
     }
-    if (user.blocked) {
+    if (user.isBlocked() === true) {
+
       return res
         .status(StatusCodes.BadRequestError)
         .json({ message: "User blocked. Cannot log in" });
     }
-    console.log(user)
 
-    // const isPasswordCorrect = await user.comparePassword(password);
-    const isPasswordCorrect = await bcrypt.compare(password, user.password);
+    const isPasswordCorrect = await user.comparePassword(password);
 
     if (!isPasswordCorrect) {
       throw new UnauthenticatedError("Passwords do not match");
@@ -64,6 +64,7 @@ const updateUser = async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 };
+
 
 module.exports = {
   register,
