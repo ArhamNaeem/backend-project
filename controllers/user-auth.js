@@ -26,7 +26,9 @@ const login = async (req, res) => {
       .status(StatusCodes.BadRequestError)
       .json({ message: "User blocked. Cannot log in" });
   }
-  const isPasswordCorrect = await user.comparePassword(password);
+  // const isPasswordCorrect = await user.comparePassword(password);
+  const isPasswordCorrect = await bcrypt.compare(passwrd, user.password)
+
   if (!isPasswordCorrect) {
     throw new UnauthenticatedError("Passwords do not match");
   }
