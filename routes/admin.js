@@ -14,6 +14,7 @@ const {
   getBlockedUsers,
   getUserID,
   updateUserLevel,
+  updateUserTrialBonus
 } = require("../controllers/admin");
 
 router.get("/get-all-users", getAllUsers);
@@ -34,6 +35,7 @@ router.get("/get-blocked-users", getBlockedUsers);
 router.get("/get-unblocked-users", getUnblockedUsers);
 router.get("/get-user-id", getUserID);
 router.patch("/update-user-VIPlevel/:id", updateUserLevel);
+router.patch("/update-user-trialBonus/:id", updateUserTrialBonus);
 
 
 

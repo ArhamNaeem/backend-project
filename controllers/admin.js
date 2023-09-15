@@ -306,6 +306,25 @@ const updateUserLevel = async (req, res) => {
 };
 
 
+const updateUserTrialBonus = async (req,res)=>{
+  const { id } = req.params;
+  const { trialBonus } = req.body;
+
+  try {
+    const user = await User.findById(id);
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found", user });
+    }
+    user.trialBonus += trialBonus;
+    user.save();
+
+    res.json({ message: "User balance updated", user });
+  } catch (error) {
+    res.status(500).json({ error: "Server error" });
+  } 
+}
+
 module.exports = {
   updateUserLevel,
   getAllUsers,
@@ -322,4 +341,5 @@ module.exports = {
   getUnblockedUsers,
   getBlockedUsers,
   getUserID,
+  updateUserTrialBonus
 };
