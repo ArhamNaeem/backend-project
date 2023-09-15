@@ -3,7 +3,7 @@ const { StatusCodes } = require("http-status-codes");
 const User = require("../models/User");
 const Movie = require("../models/Movie");
 const addRecord = async (req, res) => {
-  const { price,movieComm } = req.body;
+  const { price,comm } = req.body;
   try {
     const user = await User.findByIdAndUpdate({_id:req.body.user})
  
@@ -12,12 +12,12 @@ const addRecord = async (req, res) => {
     //   user.trialBonus -= price
     // }
     if(user.ticketsBought >= 30){
-    res.status(StatusCodes.FORBIDDEN).json({ success:false, message:'Record cannot be dded' });
+    return res.status(StatusCodes.FORBIDDEN).json({ success:false, message:'Record cannot be added' });
 
     }
-    user.totalDayEarn += movieComm
+    user.totalDayEarn += comm
     user.balance += price
-    user.balance += movieComm
+    user.balance += comm
     user.ticketsBought+=1
     user.save()
     // console.log(user,record)
