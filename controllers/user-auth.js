@@ -35,6 +35,7 @@ const login = async (req, res) => {
     console.log(isPasswordCorrect)
 
     if (!isPasswordCorrect) {
+      console.log('passwords dont match')
       throw new UnauthenticatedError("Passwords do not match");
     }
     res.status(StatusCodes.OK).json({ message: "Logged in", user });
