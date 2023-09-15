@@ -19,7 +19,7 @@ const login = async (req, res) => {
   }
   const user = await User.findOne({ email });
   if (!user) {
-    throw new UnauthenticatedError("Invalid Credentials");
+    throw new UnauthenticatedError("User not found");
   }
   if (user.blocked) {
     return res
@@ -28,11 +28,10 @@ const login = async (req, res) => {
   }
   const isPasswordCorrect = await user.comparePassword(password);
   if (!isPasswordCorrect) {
-    throw new UnauthenticatedError("Invalid Credentials");
+    throw new UnauthenticatedError("Passwords do not match");
   }
   // compare password
-  const token = user.createJWT();
-  res.status(StatusCodes.OK).json({ message: "Logged in", user, token });
+  res.status(StatusCodes.OK).json({ message: "Logged in", user });
 };
 
 const updateUser = async (req, res) => {
