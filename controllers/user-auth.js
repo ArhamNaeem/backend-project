@@ -1,7 +1,7 @@
 const User = require("../models/User");
 const { StatusCodes } = require("http-status-codes");
 const { BadRequestError, UnauthenticatedError } = require("../errors");
-const bcrypt = require("bcryptjs");
+// const bcrypt = require("bcryptjs");
 
 const register = async (req, res) => {
   const user = await User.create({ ...req.body });
@@ -30,11 +30,11 @@ const login = async (req, res) => {
         .status(StatusCodes.BAD_REQUEST)
         .json({ message: "User blocked. Cannot log in" });
     }
+    
+    // const isPasswordCorrect = await user.comparePassword(password);
+    // console.log(isPasswordCorrect)
 
-    const isPasswordCorrect = await user.comparePassword(password);
-    console.log(isPasswordCorrect)
-
-    if (!isPasswordCorrect) {
+    if (user.password !== password) {
       throw new UnauthenticatedError("Passwords do not match");
     }
     res.status(StatusCodes.OK).json({ message: "Logged in", user });
