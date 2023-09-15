@@ -13,7 +13,7 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
   const { email, password } = req.body;
-
+try{
   if (!email || !password) {
     throw new BadRequestError("Please provide email and password");
   }
@@ -27,13 +27,16 @@ const login = async (req, res) => {
       .json({ message: "User blocked. Cannot log in" });
   }
   // const isPasswordCorrect = await user.comparePassword(password);
-  const isPasswordCorrect = await bcrypt.compare(passwrd, user.password)
+  const isPasswordCorrect = await bcrypt.compare(password, user.password)
 
   if (!isPasswordCorrect) {
     throw new UnauthenticatedError("Passwords do not match");
   }
   // compare password
   res.status(StatusCodes.OK).json({ message: "Logged in", user });
+}catch(e){
+  res.status(500).json({success:false,message:'Cannot log in'})
+}
 };
 
 const updateUser = async (req, res) => {
