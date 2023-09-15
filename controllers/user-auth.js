@@ -27,7 +27,7 @@ const login = async (req, res) => {
     if (user.isBlocked() === true) {
 
       return res
-        .status(StatusCodes.BadRequestError)
+        .status(StatusCodes.BAD_REQUEST)
         .json({ message: "User blocked. Cannot log in" });
     }
 
