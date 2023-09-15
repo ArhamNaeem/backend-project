@@ -1,7 +1,7 @@
 const Movie = require('../models/Movie'); 
 const StatusCodes = require('http-status-codes')
 const addMovie = async (req, res) => {
-  const { title,product,price,VIPLevel } = req.body;
+  const { title,product,price,VIPLevel,movieComm } = req.body;
 
   try {
     // Create a new movie instance
@@ -9,7 +9,8 @@ const addMovie = async (req, res) => {
       title,
       product,
       price,
-      VIPLevel
+      VIPLevel,
+      movieComm
     });
 
     await newMovie.save();

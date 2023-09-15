@@ -20,10 +20,7 @@ const UserSchema = new mongoose.Schema({
     required: true,
     default:0
   },
-  commRate: {
-    type: Number,
-    default: 0.8
-  },
+  
   blocked: {
     type: Boolean,
     default: false

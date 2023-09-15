@@ -1,539 +1,537 @@
 [
+  {
+    "title": "Avatar",
+    "VIPLevel": 0,
+    "product": "DVD",
+    "price": 46.00,
+    "movieComm": 0.64
+  },
+  {
+    "title": "Jurassic Park",
+    "VIPLevel": 0,
+    "product": "Blu-ray",
+    "price": 61.00,
+    "movieComm": 0.85
+  },
+  {
+    "title": "The Avengers",
+    "VIPLevel": 0,
+    "product": "DVD",
+    "price": 61.00,
+    "movieComm": 0.85
+  },
+  {
+    "title": "Star Wars: The Empire Strikes Back",
+    "VIPLevel": 0,
+    "product": "Blu-ray",
+    "price": 76.00,
+    "movieComm": 1.06
+  },
+  {
+    "title": "Inception PART II",
+    "VIPLevel": 0,
+    "product": "DVD",
+    "price": 79.00,
+    "movieComm": 1.10
+  },
+  {
+    "title": "The Matrix PART II",
+    "VIPLevel": 0,
+    "product": "Blu-ray",
+    "price": 72.00,
+    "movieComm": 1.00
+  },
+  {
+    "title": "The Dark Knight",
+    "VIPLevel": 0,
+    "product": "DVD",
+    "price": 78.00,
+    "movieComm": 1.09
+  },
+  {
+    "title": "E.T. the Extra-Terrestrial PART II",
+    "VIPLevel": 0,
+    "product": "Blu-ray",
+    "price": 89.00,
+    "movieComm": 1.24
+  },
+  {
+    "title": "Forrest Gump PART II",
+    "VIPLevel": 0,
+    "product": "DVD",
+    "price": 58.00,
+    "movieComm": 0.81
+  },
+  {
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "VIPLevel": 0,
+    "product": "Blu-ray",
+    "price": 88.00,
+    "movieComm": 1.23
+  },
+  {
+    "title": "Pulp Fiction",
+    "VIPLevel": 0,
+    "product": "DVD",
+    "price": 78.00,
+    "movieComm": 1.09
+  },
+  {
+    "title": "The Shawshank Redemption PART I",
+    "VIPLevel": 0,
+    "product": "Blu-ray",
+    "price": 62.00,
+    "movieComm": 0.86
+  },
+  {
+    "title": "The Godfather",
+    "VIPLevel": 0,
+    "product": "DVD",
+    "price": 72.00,
+    "movieComm": 1.00
+  },
+  {
+    "title": "Inglourious Basterds",
+    "VIPLevel": 0,
+    "product": "Blu-ray",
+    "price": 81.00,
+    "movieComm": 1.13
+  },
+  {
+    "title": "Interstellar PART I",
+    "VIPLevel": 0,
+    "product": "DVD",
+    "price": 46.00,
+    "movieComm": 0.64
+  },
+  {
+    "title": "The Lion King",
+    "VIPLevel": 0,
+    "product": "Blu-ray",
+    "price": 61.00,
+    "movieComm": 0.85
+  },
+  {
+    "title": "Titanic",
+    "VIPLevel": 0,
+    "product": "DVD",
+    "price": 83.00,
+    "movieComm": 1.16
+  },
+  {
+    "title": "Toy Story",
+    "VIPLevel": 0,
+    "product": "Blu-ray",
+    "price": 61.00,
+    "movieComm": 0.85
+  },
+  {
+    "title": "The Terminator",
+    "VIPLevel": 0,
+    "product": "DVD",
+    "price": 76.00,
+    "movieComm": 1.06
+  },
+  {
+    "title": "Gladiator",
+    "VIPLevel": 0,
+    "product": "Blu-ray",
+    "price": 79.00,
+    "movieComm": 1.10
+  },
+  {
+    "title": "Forrest Gump PART III",
+    "VIPLevel": 0,
+    "product": "DVD",
+    "price": 72.00,
+    "movieComm": 1.00
+  },
+  {
+    "title": "The Dark Knight Rises",
+    "VIPLevel": 0,
+    "product": "Blu-ray",
+    "price": 78.00,
+    "movieComm": 1.09
+  },
+  {
+    "title": "The Godfather: Part II",
+    "VIPLevel": 0,
+    "product": "DVD",
+    "price": 89.00,
+    "movieComm": 1.24
+  },
+  {
+    "title": "The Shawshank Redemption PART II",
+    "VIPLevel": 0,
+    "product": "Blu-ray",
+    "price": 58.00,
+    "movieComm": 0.81
+  },
+  {
+    "title": "Inception PART I",
+    "VIPLevel": 0,
+    "product": "DVD",
+    "price": 88.00,
+    "movieComm": 1.23
+  },
+  {
+    "title": "The Matrix PART I",
+    "VIPLevel": 0,
+    "product": "Blu-ray",
+    "price": 78.00,
+    "movieComm": 1.09
+  },
+  {
+    "title": "E.T. the Extra-Terrestrial PART I",
+    "VIPLevel": 0,
+    "product": "DVD",
+    "price": 62.00,
+    "movieComm": 0.86
+  },
+  {
+    "title": "Forrest Gump PART I",
+    "VIPLevel": 0,
+    "product": "Blu-ray",
+    "price": 72.00,
+    "movieComm": 1.00
+  },
+  {
+    "title": "The Shawshank Redemption PART III",
+    "VIPLevel": 0,
+    "product": "DVD",
+    "price": 81.00,
+    "movieComm": 1.13
+  },
+  {
+    "title": "Interstellar PART II",
+    "VIPLevel": 0,
+    "product": "Blu-ray",
+    "price": 46.00,
+    "movieComm": 0.64
+  },
     {
-      "title": "Frozen",
+      "title": "Metropolis",
+      "VIPLevel": 1,
       "product": "DVD",
-      "price": 12,
-      "VIPLevel": 0
+      "price": 1061.00,
+      "movieComm": 10.81
     },
     {
-      "title": "The Lion King",
+      "title": "Nosferatu",
+      "VIPLevel": 1,
       "product": "Blu-ray",
-      "price": 45,
-      "VIPLevel": 0
+      "price": 1183.00,
+      "movieComm": 12.03
     },
     {
-      "title": "Toy Story",
+      "title": "The Birth of a Nation",
+      "VIPLevel": 1,
       "product": "DVD",
-      "price": 30,
-      "VIPLevel": 0
+      "price": 961.00,
+      "movieComm": 9.81
     },
     {
-      "title": "Finding Nemo",
-      "product": "DVD",
-      "price": 25,
-      "VIPLevel": 0
-    },
-    {
-      "title": "Shrek",
-      "product": "DVD",
-      "price": 18,
-      "VIPLevel": 0
-    },
-    {
-      "title": "Spider-Man",
+      "title": "Battleship Potemkin",
+      "VIPLevel": 1,
       "product": "Blu-ray",
-      "price": 50,
-      "VIPLevel": 0
+      "price": 676.00,
+      "movieComm": 6.96
     },
     {
-      "title": "Harry Potter and the Sorcerer's Stone",
+      "title": "The Jazz Singer",
+      "VIPLevel": 1,
+      "product": "DVD",
+      "price": 179.00,
+      "movieComm": 1.99
+    },
+    {
+      "title": "The General PART I",
+      "VIPLevel": 1,
       "product": "Blu-ray",
-      "price": 38,
-      "VIPLevel": 0
+      "price": 772.00,
+      "movieComm": 7.92
     },
     {
-      "title": "The Incredibles",
+      "title": "Wings PART I",
+      "VIPLevel": 1,
       "product": "DVD",
-      "price": 22,
-      "VIPLevel": 0
+      "price": 2278.00,
+      "movieComm": 22.98
     },
     {
-      "title": "Jurassic Park",
-      "product": "DVD",
-      "price": 15,
-      "VIPLevel": 0
-    },
-    {
-      "title": "Avatar",
+      "title": "Sunrise: A Song of Two Humans PART II",
+      "VIPLevel": 1,
       "product": "Blu-ray",
-      "price": 58,
-      "VIPLevel": 0
+      "price": 2489.00,
+      "movieComm": 25.90
     },
     {
-      "title": "E.T. the Extra-Terrestrial",
+      "title": "The Phantom of the Opera",
+      "VIPLevel": 1,
       "product": "DVD",
-      "price": 9,
-      "VIPLevel": 0
+      "price": 3580.00,
+      "movieComm": 37.80
     },
     {
-      "title": "The Avengers",
+      "title": "The Gold Rush PART I",
+      "VIPLevel": 1,
       "product": "Blu-ray",
-      "price": 65,
-      "VIPLevel": 0
+      "price": 882.00,
+      "movieComm": 9.02
     },
     {
-      "title": "Frozen II",
+      "title": "The Circus Part II",
+      "VIPLevel": 1,
       "product": "DVD",
-      "price": 20,
-      "VIPLevel": 0
+      "price": 1178.00,
+      "movieComm": 11.98
     },
     {
-      "title": "Star Wars: Episode IV - A New Hope",
-      "product": "DVD",
-      "price": 14,
-      "VIPLevel": 0
-    },
-    {
-      "title": "Moana",
+      "title": "The Passion of Joan of Arc",
+      "VIPLevel": 1,
       "product": "Blu-ray",
-      "price": 40,
-      "VIPLevel": 0
+      "price": 1612.00,
+      "movieComm": 16.32
     },
     {
-      "title": "The Little Mermaid",
+      "title": "The Crowd PART II",
+      "VIPLevel": 1,
       "product": "DVD",
-      "price": 28,
-      "VIPLevel": 0
+      "price": 2872.00,
+      "movieComm": 28.92
     },
     {
-      "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
-      "product": "DVD",
-      "price": 17,
-      "VIPLevel": 0
-    },
-    {
-      "title": "Aladdin",
-      "product": "DVD",
-      "price": 26,
-      "VIPLevel": 0
-    },
-    {
-      "title": "The Jungle Book",
+      "title": "The Wind",
+      "VIPLevel": 1,
       "product": "Blu-ray",
-      "price": 55,
-      "VIPLevel": 0
+      "price": 3811.00,
+      "movieComm": 38.32
     },
     {
-      "title": "Beauty and the Beast",
+      "title": "Sunrise: A Song of Two Humans PART I",
+      "VIPLevel": 1,
       "product": "DVD",
-      "price": 32,
-      "VIPLevel": 0
+      "price": 4126.00,
+      "movieComm": 41.46
     },
     {
-      "title": "Cinderella",
-      "product": "DVD",
-      "price": 20,
-      "VIPLevel": 0
-    },
-    {
-      "title": "Transformers",
+      "title": "The Kid PART I",
+      "VIPLevel": 1,
       "product": "Blu-ray",
-      "price": 75,
-      "VIPLevel": 0
+      "price": 1611.00,
+      "movieComm": 16.33
     },
     {
-      "title": "The Dark Knight",
+      "title": "The Cabinet of Dr. Caligari PART II",
+      "VIPLevel": 1,
       "product": "DVD",
-      "price": 11,
-      "VIPLevel": 0
+      "price": 1283.00,
+      "movieComm": 13.05
     },
     {
-      "title": "Forrest Gump",
+      "title": "The General PART II",
+      "VIPLevel": 1,
       "product": "Blu-ray",
-      "price": 42,
-      "VIPLevel": 0
+      "price": 5461.00,
+      "movieComm": 54.81
     },
     {
-      "title": "Inception",
+      "title": "Wings PART II",
+      "VIPLevel": 1,
       "product": "DVD",
-      "price": 19,
-      "VIPLevel": 0
+      "price": 2276.00,
+      "movieComm": 22.96
     },
     {
-      "title": "Jurassic World",
-      "product": "DVD",
-      "price": 27,
-      "VIPLevel": 0
-    },
-    {
-      "title": "Zootopia",
+      "title": "The Gold Rush PART II",
+      "VIPLevel": 1,
       "product": "Blu-ray",
-      "price": 33,
-      "VIPLevel": 0
+      "price": 1579.00,
+      "movieComm": 15.99
     },
     {
-      "title": "Wonder Woman",
+      "title": "The Kid PART II",
+      "VIPLevel": 1,
       "product": "DVD",
-      "price": 16,
-      "VIPLevel": 0
+      "price": 2272.00,
+      "movieComm": 22.92
     },
     {
-      "title": "Spider-Man: Far From Home",
+      "title": "The Cabinet of Dr. Caligari PART I",
+      "VIPLevel": 1,
       "product": "Blu-ray",
-      "price": 48,
-      "VIPLevel": 0
+      "price": 1278.00,
+      "movieComm": 12.98
     },
     {
-      "title": "Jumanji: Welcome to the Jungle",
+      "title": "The Crowd PART I",
+      "VIPLevel": 1,
       "product": "DVD",
-      "price": 23,
-      "VIPLevel": 0
+      "price": 3789.00,
+      "movieComm": 38.09
     },
-        {
-          "title": "Interstellar",
-          "product": "Blu-ray",
-          "price": 250,
-          "VIPLevel": 1
-        },
-        {
-          "title": "The Godfather",
-          "product": "DVD",
-          "price": 450,
-          "VIPLevel": 1
-        },
-        {
-          "title": "The Shawshank Redemption",
-          "product": "Blu-ray",
-          "price": 320,
-          "VIPLevel": 1
-        },
-        {
-          "title": "Gladiator",
-          "product": "DVD",
-          "price": 280,
-          "VIPLevel": 1
-        },
-        {
-          "title": "The Matrix",
-          "product": "Blu-ray",
-          "price": 220,
-          "VIPLevel": 1
-        },
-        {
-          "title": "The Dark Knight Rises",
-          "product": "DVD",
-          "price": 390,
-          "VIPLevel": 1
-        },
-        {
-          "title": "Braveheart",
-          "product": "Blu-ray",
-          "price": 310,
-          "VIPLevel": 1
-        },
-        {
-          "title": "Inglourious Basterds",
-          "product": "DVD",
-          "price": 210,
-          "VIPLevel": 1
-        },
-        {
-          "title": "Schindler's List",
-          "product": "Blu-ray",
-          "price": 580,
-          "VIPLevel": 1
-        },
-        {
-          "title": "Pulp Fiction",
-          "product": "DVD",
-          "price": 170,
-          "VIPLevel": 1
-        },
-        {
-          "title": "The Revenant",
-          "product": "Blu-ray",
-          "price": 290,
-          "VIPLevel": 1
-        },
-        {
-          "title": "Mad Max: Fury Road",
-          "product": "DVD",
-          "price": 230,
-          "VIPLevel": 1
-        },
-        {
-          "title": "The Departed",
-          "product": "Blu-ray",
-          "price": 520,
-          "VIPLevel": 1
-        },
-        {
-          "title": "The Silence of the Lambs",
-          "product": "DVD",
-          "price": 160,
-          "VIPLevel": 1
-        },
-        {
-          "title": "Django Unchained",
-          "product": "Blu-ray",
-          "price": 360,
-          "VIPLevel": 1
-        },
-        {
-          "title": "A Beautiful Mind",
-          "product": "DVD",
-          "price": 180,
-          "VIPLevel": 1
-        },
-        {
-          "title": "Forrest Gump",
-          "product": "Blu-ray",
-          "price": 700,
-          "VIPLevel": 1
-        },
-        {
-          "title": "The Martian",
-          "product": "DVD",
-          "price": 270,
-          "VIPLevel": 1
-        },
-        {
-          "title": "The Prestige",
-          "product": "Blu-ray",
-          "price": 380,
-          "VIPLevel": 1
-        },
-        {
-          "title": "Shutter Island",
-          "product": "DVD",
-          "price": 140,
-          "VIPLevel": 1
-        },
-        {
-          "title": "Avatar",
-          "product": "Blu-ray",
-          "price": 810,
-          "VIPLevel": 1
-        },
-        {
-          "title": "Inception",
-          "product": "DVD",
-          "price": 190,
-          "VIPLevel": 1
-        },
-        {
-          "title": "The Green Mile",
-          "product": "Blu-ray",
-          "price": 440,
-          "VIPLevel": 1
-        },
-        {
-          "title": "The Godfather: Part II",
-          "product": "DVD",
-          "price": 320,
-          "VIPLevel": 1
-        },
-        {
-          "title": "The Wolf of Wall Street",
-          "product": "Blu-ray",
-          "price": 370,
-          "VIPLevel": 1
-        },
-        {
-          "title": "The Matrix Reloaded",
-          "product": "DVD",
-          "price": 240,
-          "VIPLevel": 1
-        },
-        {
-          "title": "Gladiator",
-          "product": "Blu-ray",
-          "price": 530,
-          "VIPLevel": 1
-        },
-        {
-          "title": "The Dark Knight",
-          "product": "DVD",
-          "price": 130,
-          "VIPLevel": 1
-        },
-        {
-          "title": "Fight Club",
-          "product": "Blu-ray",
-          "price": 280,
-          "VIPLevel": 1
-        },
-            {
-              "title": "Avengers: Endgame",
-              "product": "Blu-ray",
-              "price": 7500,
-              "VIPLevel": 2
-            },
-            {
-              "title": "The Lord of the Rings: The Return of the King",
-              "product": "DVD",
-              "price": 2200,
-              "VIPLevel": 2
-            },
-            {
-              "title": "Titanic",
-              "product": "Blu-ray",
-              "price": 4500,
-              "VIPLevel": 2
-            },
-            {
-              "title": "Star Wars: Episode VII - The Force Awakens",
-              "product": "DVD",
-              "price": 1800,
-              "VIPLevel": 2
-            },
-            {
-              "title": "The Dark Knight",
-              "product": "Blu-ray",
-              "price": 3200,
-              "VIPLevel": 2
-            },
-            {
-              "title": "Avatar",
-              "product": "DVD",
-              "price": 1100,
-              "VIPLevel": 2
-            },
-            {
-              "title": "Jurassic Park",
-              "product": "Blu-ray",
-              "price": 2600,
-              "VIPLevel": 2
-            },
-            {
-              "title": "Inception",
-              "product": "DVD",
-              "price": 1400,
-              "VIPLevel": 2
-            },
-            {
-              "title": "Spider-Man: No Way Home",
-              "product": "Blu-ray",
-              "price": 6800,
-              "VIPLevel": 2
-            },
-            {
-              "title": "The Lord of the Rings: The Fellowship of the Ring",
-              "product": "DVD",
-              "price": 2000,
-              "VIPLevel": 2
-            },
-            {
-              "title": "Star Wars: Episode VIII - The Last Jedi",
-              "product": "Blu-ray",
-              "price": 3500,
-              "VIPLevel": 2
-            },
-            {
-              "title": "Gladiator",
-              "product": "DVD",
-              "price": 1700,
-              "VIPLevel": 2
-            },
-            {
-              "title": "The Godfather",
-              "product": "Blu-ray",
-              "price": 6200,
-              "VIPLevel": 2
-            },
-            {
-              "title": "The Matrix",
-              "product": "DVD",
-              "price": 1200,
-              "VIPLevel": 2
-            },
-            {
-              "title": "The Shawshank Redemption",
-              "product": "Blu-ray",
-              "price": 2800,
-              "VIPLevel": 2
-            },
-            {
-              "title": "Pulp Fiction",
-              "product": "DVD",
-              "price": 1600,
-              "VIPLevel": 2
-            },
-            {
-              "title": "The Revenant",
-              "product": "Blu-ray",
-              "price": 3900,
-              "VIPLevel": 2
-            },
-            {
-              "title": "The Silence of the Lambs",
-              "product": "DVD",
-              "price": 1900,
-              "VIPLevel": 2
-            },
-            {
-              "title": "Django Unchained",
-              "product": "Blu-ray",
-              "price": 2800,
-              "VIPLevel": 2
-            },
-            {
-              "title": "A Beautiful Mind",
-              "product": "DVD",
-              "price": 1400,
-              "VIPLevel": 2
-            },
-            {
-              "title": "Forrest Gump",
-              "product": "Blu-ray",
-              "price": 4600,
-              "VIPLevel": 2
-            },
-            {
-              "title": "The Martian",
-              "product": "DVD",
-              "price": 2000,
-              "VIPLevel": 2
-            },
-            {
-              "title": "The Prestige",
-              "product": "Blu-ray",
-              "price": 3200,
-              "VIPLevel": 2
-            },
-            {
-              "title": "Shutter Island",
-              "product": "DVD",
-              "price": 1300,
-              "VIPLevel": 2
-            },
-            {
-              "title": "The Godfather: Part II",
-              "product": "Blu-ray",
-              "price": 5500,
-              "VIPLevel": 2
-            },
-            {
-              "title": "The Wolf of Wall Street",
-              "product": "DVD",
-              "price": 2400,
-              "VIPLevel": 2
-            },
-            {
-              "title": "The Matrix Reloaded",
-              "product": "Blu-ray",
-              "price": 3800,
-              "VIPLevel": 2
-            },
-            {
-              "title": "Gladiator",
-              "product": "DVD",
-              "price": 1500,
-              "VIPLevel": 2
-            },
-            {
-              "title": "The Dark Knight",
-              "product": "Blu-ray",
-              "price": 2900,
-              "VIPLevel": 2
-            },
-            {
-              "title": "Fight Club",
-              "product": "DVD",
-              "price": 1700,
-              "VIPLevel": 2
-            }
-                 
-      
-  ]
+      {
+        "title": "The Horse in Motion Part II",
+        "VIPLevel": 2,
+        "product": "DVD",
+        "price": 1061.00,
+        "movieComm": 10.81
+      },
+      {
+        "title": "Roundhay Garden Scene",
+        "VIPLevel": 2,
+        "product": "Blu-ray",
+        "price": 1183.00,
+        "movieComm": 12.03
+      },
+      {
+        "title": "Workers Leaving the Lumière Factory",
+        "VIPLevel": 2,
+        "product": "DVD",
+        "price": 961.00,
+        "movieComm": 9.81
+      },
+      {
+        "title": "A Trip to the Moon",
+        "VIPLevel": 2,
+        "product": "Blu-ray",
+        "price": 676.00,
+        "movieComm": 6.96
+      },
+      {
+        "title": "The Great Train Robbery Part I",
+        "VIPLevel": 2,
+        "product": "DVD",
+        "price": 179.00,
+        "movieComm": 1.99
+      },
+      {
+        "title": "The Arrival of a Train Part II",
+        "VIPLevel": 2,
+        "product": "Blu-ray",
+        "price": 772.00,
+        "movieComm": 7.92
+      },
+      {
+        "title": "The Execution of Mary Stuart Part II",
+        "VIPLevel": 2,
+        "product": "DVD",
+        "price": 2278.00,
+        "movieComm": 22.98
+      },
+      {
+        "title": "The Waterer Watered",
+        "VIPLevel": 2,
+        "product": "Blu-ray",
+        "price": 2489.00,
+        "movieComm": 25.90
+      },
+      {
+        "title": "The Kiss Part II",
+        "VIPLevel": 2,
+        "product": "DVD",
+        "price": 3580.00,
+        "movieComm": 37.80
+      },
+      {
+        "title": "The Sprinkler Sprinkled Part I",
+        "VIPLevel": 2,
+        "product": "Blu-ray",
+        "price": 882.00,
+        "movieComm": 9.02
+      },
+      {
+        "title": "The Circus Part III",
+        "VIPLevel": 2,
+        "product": "DVD",
+        "price": 1178.00,
+        "movieComm": 11.98
+      },
+      {
+        "title": "The Execution of Mary Stuart Part I",
+        "VIPLevel": 2,
+        "product": "Blu-ray",
+        "price": 1612.00,
+        "movieComm": 16.32
+      },
+      {
+        "title": "The Sandman Part II",
+        "VIPLevel": 2,
+        "product": "DVD",
+        "price": 2872.00,
+        "movieComm": 28.92
+      },
+      {
+        "title": "The Sneeze Part II",
+        "VIPLevel": 2,
+        "product": "Blu-ray",
+        "price": 3811.00,
+        "movieComm": 38.32
+      },
+      {
+        "title": "The Sprinkler Sprinkled Part II",
+        "VIPLevel": 2,
+        "product": "DVD",
+        "price": 4126.00,
+        "movieComm": 41.46
+      },
+      {
+        "title": "The Arrival of a Train Part I",
+        "VIPLevel": 2,
+        "product": "Blu-ray",
+        "price": 1611.00,
+        "movieComm": 16.33
+      },
+      {
+        "title": "The Great Train Robbery Part II",
+        "VIPLevel": 2,
+        "product": "DVD",
+        "price": 1283.00,
+        "movieComm": 13.05
+      },
+      {
+        "title": "The Kiss Part I",
+        "VIPLevel": 2,
+        "product": "Blu-ray",
+        "price": 5461.00,
+        "movieComm": 54.81
+      },
+      {
+        "title": "The Circus Part I",
+        "VIPLevel": 2,
+        "product": "DVD",
+        "price": 2276.00,
+        "movieComm": 22.96
+      },
+      {
+        "title": "The Execution of Mary Stuart Part III",
+        "VIPLevel": 2,
+        "product": "Blu-ray",
+        "price": 1579.00,
+        "movieComm": 15.99
+      },
+      {
+        "title": "The Sneeze Part I",
+        "VIPLevel": 2,
+        "product": "DVD",
+        "price": 2272.00,
+        "movieComm": 22.92
+      },
+      {
+        "title": "The Sandman Part I",
+        "VIPLevel": 2,
+        "product": "Blu-ray",
+        "price": 1278.00,
+        "movieComm": 12.98
+      },
+      {
+        "title": "The Horse in Motion Part I",
+        "VIPLevel": 2,
+        "product": "DVD",
+        "price": 3789.00,
+        "movieComm": 38.09
+      }
+    ]
+    
+  
   

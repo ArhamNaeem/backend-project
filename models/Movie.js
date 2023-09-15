@@ -27,6 +27,10 @@ const movieSchema = new mongoose.Schema({
     type:String,
     required:[true,'please provide title']
   },
+  movieComm:{
+    type:Number,
+    required:[true,'movie commission is required']
+  },
 product:{
   type:String,
   required:[true,'please provide product']
