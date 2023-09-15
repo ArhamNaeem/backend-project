@@ -13,30 +13,33 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
   const { email, password } = req.body;
-try{
-  if (!email || !password) {
-    throw new BadRequestError("Please provide email and password");
-  }
-  const user = await User.findOne({ email });
-  if (!user) {
-    throw new UnauthenticatedError("User not found");
-  }
-  if (user.blocked) {
-    return res
-      .status(StatusCodes.BadRequestError)
-      .json({ message: "User blocked. Cannot log in" });
-  }
-  // const isPasswordCorrect = await user.comparePassword(password);
-  const isPasswordCorrect = await bcrypt.compare(password, user.password)
+  try {
+    if (!email || !password) {
+      throw new BadRequestError("Please provide email and password");
+    }
+    const user = await User.findOne({ email });
+    console.log(user)
+    if (!user) {
+      throw new UnauthenticatedError("User not found");
+    }
+    if (user.blocked) {
+      return res
+        .status(StatusCodes.BadRequestError)
+        .json({ message: "User blocked. Cannot log in" });
+    }
+    console.log(user)
 
-  if (!isPasswordCorrect) {
-    throw new UnauthenticatedError("Passwords do not match");
+    // const isPasswordCorrect = await user.comparePassword(password);
+    const isPasswordCorrect = await bcrypt.compare(password, user.password);
+
+    if (!isPasswordCorrect) {
+      throw new UnauthenticatedError("Passwords do not match");
+    }
+    // compare password
+    res.status(StatusCodes.OK).json({ message: "Logged in", user });
+  } catch (e) {
+    res.status(500).json({ success: false, message: "Cannot log in" });
   }
-  // compare password
-  res.status(StatusCodes.OK).json({ message: "Logged in", user });
-}catch(e){
-  res.status(500).json({success:false,message:'Cannot log in'})
-}
 };
 
 const updateUser = async (req, res) => {
