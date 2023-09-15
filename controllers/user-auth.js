@@ -23,6 +23,7 @@ const login = async (req, res) => {
     if (!user) {
       throw new UnauthenticatedError("User not found");
     }
+    console.log(user.isBlocked())
     if (user.isBlocked() === true) {
 
       return res
@@ -31,11 +32,11 @@ const login = async (req, res) => {
     }
 
     const isPasswordCorrect = await user.comparePassword(password);
+    console.log(isPasswordCorrect)
 
     if (!isPasswordCorrect) {
       throw new UnauthenticatedError("Passwords do not match");
     }
-    // compare password
     res.status(StatusCodes.OK).json({ message: "Logged in", user });
   } catch (e) {
     res.status(500).json({ success: false, message: "Cannot log in" });
