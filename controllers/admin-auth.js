@@ -2,13 +2,20 @@ const Admin = require('../models/Admin')
 const User = require('../models/User')
 const { StatusCodes } = require('http-status-codes');
 const jwt=require('jsonwebtoken');
-const jwtSeceret="IAmDevelopingMernSTACKWebsiteOfFoodOrderingSystem"
+const jwtSecret="IAmDevelopingMernSTACKWebsiteOfFoodOrderingSystem"
 
 
 const registerAdmin = async (req, res) => {
   try {
     const admin = await Admin.create({ ...req.body })
-    res.status(StatusCodes.CREATED).json({sucess:true})
+    const token = jwt.sign(
+      { userId: admin._id, name: admin.name },
+      process.env.JWT_SECRET,
+      {
+        expiresIn: '30d',
+      }
+    )
+    res.status(StatusCodes.CREATED).json({sucess:true,token})
   } catch (error) {
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({sucess:false})
   }
@@ -42,11 +49,19 @@ const loginAdmin = async (req, res) => {
     if (!admin) {
       throw new UnauthenticatedError('Invalid Credentials')
     }
-    const isPasswordCorrect = await admin.comparePassword(password)
+    // const isPasswordCorrect = await admin.comparePassword(password)
+    const isPasswordCorrect = password === admin.password
     if (!isPasswordCorrect) {
       throw new UnauthenticatedError('Invalid Credentials')
     }
-    res.status(StatusCodes.OK).json({sucess:true})
+    const token = jwt.sign(
+      { userId: admin._id, name: admin.name },
+      jwtSecret,
+      {
+        expiresIn: '30d',
+      }
+    )
+    res.status(StatusCodes.OK).json({sucess:true,token})
   }
   catch(error){
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({sucess:false})
