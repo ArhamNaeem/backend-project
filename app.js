@@ -51,7 +51,7 @@ app.use('/api/v1/movie/',movieRouter)
 app.use('/api/v1/user/',depositRouter)
 app.use('/api/v1/user/',recordsRouter)
 app.use('/api/v1/auth/admin', adminAuthRouter);
-app.use('/api/v1/admin', adminAuthorization,adminRouter);
+app.use('/api/v1/admin',adminRouter);
 app.use('/api/v1/user/',recordsRouter)
 app.use('/api/v1/user/',dayEarnRouter)
 app.use(notFoundMiddleware);
