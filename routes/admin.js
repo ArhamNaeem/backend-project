@@ -18,7 +18,7 @@ const {
   updateUserTrialBonus
 } = require("../controllers/admin");
 
-router.get("/get-all-users", getAllUsers);
+router.get("/get-all-users/", getAllUsers);
 router.post("/block-user/:id", blockUserLogin);
 router.patch("/unblock-user/:id", unblockUserLogin);
 router.patch("/edit/:id", editUser);

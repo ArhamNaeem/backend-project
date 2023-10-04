@@ -18,11 +18,11 @@ const adminRouter = require('./routes/admin');
 const reviewsRouter = require('./routes/reviews');
 const rewardsRouter = require('./routes/rewards');
 const depositRouter = require('./routes/deposit')
-const validationRouter = require('./routes/ticketPrice');
+// const validationRouter = require('./routes/ticketPrice');
 const movieRouter = require('./routes/movie')
 const dayEarnRouter = require('./routes/dayEarn')
 const recordsRouter = require('./routes/records');
-const adminAuthorization = require('./middleware/admin-authentication')
+// const adminAuthorization = require('./middleware/admin-authentication')
 // error handler
 const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
